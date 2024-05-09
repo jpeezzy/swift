@@ -497,7 +497,7 @@ set(SWIFT_DARWIN_DEPLOYMENT_VERSION_WATCHOS "4.0" CACHE STRING
 #  Compatibility library deployment versions
 #
 
-set(COMPATIBILITY_MINIMUM_DEPLOYMENT_VERSION_OSX "10.9")
+set(COMPATIBILITY_MINIMUM_DEPLOYMENT_VERSION_OSX "10.13")
 set(COMPATIBILITY_MINIMUM_DEPLOYMENT_VERSION_IOS "7.0")
 set(COMPATIBILITY_MINIMUM_DEPLOYMENT_VERSION_TVOS "9.0")
 set(COMPATIBILITY_MINIMUM_DEPLOYMENT_VERSION_WATCHOS "2.0")
@@ -648,6 +648,9 @@ option(SWIFT_THREADING_HAS_DLSYM
    support on some platforms."
   TRUE)
 
+#option(SWIFT_ENABLE_MACCATALYST
+#  "Build the Standard Library and overlays with MacCatalyst support"
+#  TRUE)
 option(SWIFT_ENABLE_MACCATALYST
   "Build the Standard Library and overlays with MacCatalyst support"
   FALSE)

@@ -43,7 +43,7 @@ set(SWIFT_SOURCE_DIR "${SWIFT_SOURCE_ROOT}/swift" CACHE PATH
 set(SWIFT_DARWIN_XCRUN_TOOLCHAIN "XcodeDefault" CACHE STRING
   "The name of the toolchain to pass to 'xcrun'.")
 
-set(SWIFT_DARWIN_DEPLOYMENT_VERSION_OSX "10.9" CACHE STRING
+set(SWIFT_DARWIN_DEPLOYMENT_VERSION_OSX "10.13" CACHE STRING
     "Minimum deployment target version for macOS.")
 set(SWIFT_DARWIN_DEPLOYMENT_VERSION_IOS "7.0" CACHE STRING
     "Minimum deployment target version for iOS.")

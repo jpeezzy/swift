@@ -56,7 +56,7 @@ option(SWIFT_STDLIB_HAS_LOCALE
 
 if("${SWIFT_HOST_VARIANT_SDK}" IN_LIST SWIFT_DARWIN_PLATFORMS)
   # All Darwin platforms have ABI stability.
-  set(SWIFT_STDLIB_STABLE_ABI_default TRUE)
+  set(SWIFT_STDLIB_STABLE_ABI_default FALSE)
 elseif("${SWIFT_HOST_VARIANT_SDK}" STREQUAL "LINUX")
   # TODO(mracek): This should get turned off, as this is not an ABI stable platform.
   set(SWIFT_STDLIB_STABLE_ABI_default TRUE)

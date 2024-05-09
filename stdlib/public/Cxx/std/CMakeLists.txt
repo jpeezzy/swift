@@ -11,7 +11,6 @@ add_custom_target(CxxStdlib-apinotes
 swift_install_in_component(FILES std.apinotes
     DESTINATION "lib/swift/apinotes"
     COMPONENT compiler)
-
 set_property(TARGET CxxStdlib-apinotes PROPERTY FOLDER "Miscellaneous")
 add_dependencies(sdk-overlay CxxStdlib-apinotes)
 add_dependencies(compiler CxxStdlib-apinotes)
@@ -52,7 +51,8 @@ add_swift_target_library(swiftCxxStdlib STATIC NO_LINK_NAME IS_STDLIB IS_SWIFT_O
     DEPLOYMENT_VERSION_OSX ${COMPATIBILITY_MINIMUM_DEPLOYMENT_VERSION_OSX}
 
     LINK_FLAGS "${SWIFT_RUNTIME_SWIFT_LINK_FLAGS}"
-    TARGET_SDKS ALL_APPLE_PLATFORMS LINUX WINDOWS
+    TARGET_SDKS ${SWIFT_DARWIN_PLATFORMS}
+    MACCATALYST_BUILD_FLAVOR "zippered"
     INSTALL_IN_COMPONENT compiler
     INSTALL_WITH_SHARED
     DEPENDS libstdcxx-modulemap libcxxshim_modulemap CxxStdlib-apinotes)
